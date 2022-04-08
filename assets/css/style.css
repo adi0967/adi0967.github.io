@@ -395,6 +395,9 @@ a {
   .banner_wrapper{
     height: 46%;
   }
+  .hero-container{
+    margin-top: -80px !important;
+  }
   .bw-subtitle{
     font-size: 22px;
   }
@@ -636,14 +639,16 @@ a {
 }
 @media (max-width:991px){
   .contact_wrapper{
-    padding-bottom: 125px !important;
+    padding-top: 100px !important;
+    padding-bottom: 50px !important;
   }
 
 }
 
 @media (max-width: 767px) {
   .contact_wrapper{
-    padding-bottom: 50px !important;
+    padding-top: 100px !important;
+    padding-bottom: 30px !important;
   }
 } 
 
