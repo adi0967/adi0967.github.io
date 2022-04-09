@@ -513,13 +513,14 @@ a {
   background-color: rgba(0, 0, 0, 0.322);
   color: #89ba16;
   cursor: pointer;
-  transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+ /* transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1); */
+  transition: transform 700ms ease;
   box-shadow: 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
 }
 
 .services_wrapper .card:hover {
   box-shadow: 0px 2px 70px 0px rgba(76, 203, 37, 0.894);
-  transform: translateY(-5px);
+  transform: scale(1.05);
 }
 
 .services_wrapper .card .card-body img{
@@ -557,24 +558,85 @@ a {
   border: none;
   cursor: pointer;
   box-shadow: 0px 5px 10px 0px rgba(255, 255, 255, 0.717); 
+
+	background:radial-gradient(#111 50%, #000 100%);
+  transition: transform 700ms ease;
 }
 
 .portfolio_wrapper .card:hover {
   box-shadow: 0px 2px 70px 0px rgba(76, 203, 37, 0.894);
-  transform: translateY(-5px);
+  transform: scale(1.05);
 }
 
-.portfolio_wrapper .card span {
-  transition: background-position 4s ease-in-out 0s;
+.portfolio_wrapper .card img {
+  /*transition: background-position 4s ease-out 0s;*/
+  transform: scale(1.05);
+	transition: all 0.3s ease-out;
   width: 100%;
   height: 100%;
-  background-position: top center;
-  background-size: cover;
+  /*background-position: top center;
+  background-size: cover;*/
 }
 
-.portfolio_wrapper .card:hover span {
-  background-position: bottom center;
+.portfolio_wrapper .card:hover img {
+  /*background-position: bottom center;*/
+  transform: scale(1.15) translateY(-20px);
+  opacity: 0.3;
 }
+
+.portfolio_wrapper .card .description{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 15px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+}
+.portfolio_wrapper .card .description h3{
+	font-weight: 700;
+	font-size: 32px;
+	margin: 0 0 20px;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out;
+
+}
+.portfolio_wrapper .card .description p{
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out 0.2s;
+}
+/*.portfolio_wrapper .card .description a{
+	color: #fff;
+	background:#34aff3;
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 5px;
+	text-decoration: none;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out 0.4s;
+}
+.portfolio_wrapper .card .description a:hover{
+	background:#0a83c5;
+}*/
+.portfolio_wrapper .card:hover .description h3{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.portfolio_wrapper .card:hover .description p{
+	opacity: 1;
+	transform: translateY(0px);
+}
+/*.portfolio_wrapper .card:hover .description a{
+	opacity: 1;
+	transform: translateY(0px);
+}*/
+
+
+
 @media (max-width:991px){
   .portfolio_wrapper .card {
       min-height: 350px;
@@ -666,13 +728,13 @@ a {
   background-color: rgba(0, 0, 0, 0.322);
   color: #89ba16;
   cursor: pointer;
-  transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+  transition: transform 500ms ease;
   box-shadow: 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
 }
 
 .hobbies_wrapper .card:hover {
   box-shadow: 0px 2px 70px 0px rgba(76, 203, 37, 0.894);
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
 .hobbies_wrapper .card .card-body img{
